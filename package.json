@@ -40,6 +40,6 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs}": "eslint --cache",
-    "*.{ts,tsx,md}": "pnpm run format:check"
+    "*.{ts,tsx,md}": "prettier --check --ignore-path .gitignore"
   }
 }
