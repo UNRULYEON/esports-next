@@ -1,0 +1,16 @@
+meta {
+  name: completed events
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://esports-api.lolesports.com/persisted/gw/getCompletedEvents?hl=en-US
+  body: none
+  auth: none
+}
+
+params:query {
+  hl: en-US
+  ~tournamentId: 
+}

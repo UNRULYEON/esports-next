@@ -1,0 +1,16 @@
+meta {
+  name: games
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://esports-api.lolesports.com/persisted/gw/getGames?hl=en-US
+  body: none
+  auth: none
+}
+
+params:query {
+  hl: en-US
+  ~id: 
+}

@@ -1,0 +1,17 @@
+meta {
+  name: schedule
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://esports-api.lolesports.com/persisted/gw/getSchedule?hl=en-US&pageToken
+  body: none
+  auth: none
+}
+
+params:query {
+  hl: en-US
+  pageToken: 
+  ~leagueId: 
+}

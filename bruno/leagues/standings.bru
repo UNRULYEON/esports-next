@@ -1,0 +1,16 @@
+meta {
+  name: standings
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://esports-api.lolesports.com/persisted/gw/getStandings?hl=en-US&tournamentId=98767975604431411
+  body: none
+  auth: none
+}
+
+params:query {
+  hl: en-US
+  tournamentId: 98767975604431411
+}
