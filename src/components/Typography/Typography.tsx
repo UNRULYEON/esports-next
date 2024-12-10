@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type H1Props = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HTMLAttributes<HTMLHeadingElement>;
 const H1 = ({ children, className, ...props }: H1Props) => (
   <h1
     className={cn(
@@ -18,7 +18,7 @@ const H1 = ({ children, className, ...props }: H1Props) => (
 
 type H2Props = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HTMLAttributes<HTMLHeadingElement>;
 const H2 = ({ children, className, ...props }: H2Props) => (
   <h2
     className={cn(
@@ -33,7 +33,7 @@ const H2 = ({ children, className, ...props }: H2Props) => (
 
 type H3Props = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HTMLAttributes<HTMLHeadingElement>;
 const H3 = ({ children, className, ...props }: H3Props) => (
   <h3
     className={cn(
@@ -48,7 +48,7 @@ const H3 = ({ children, className, ...props }: H3Props) => (
 
 type H4Props = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HTMLAttributes<HTMLHeadingElement>;
 const H4 = ({ children, className, ...props }: H4Props) => (
   <h4
     className={cn("text-xl font-semibold leading-7 text-foreground", className)}
@@ -60,7 +60,7 @@ const H4 = ({ children, className, ...props }: H4Props) => (
 
 type ParagraphProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HTMLAttributes<HTMLHeadingElement>;
 const Paragraph = ({ children, className, ...props }: ParagraphProps) => (
   <h1
     className={cn(
@@ -75,7 +75,7 @@ const Paragraph = ({ children, className, ...props }: ParagraphProps) => (
 
 type InlineCodeProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLElement>;
+} & HTMLAttributes<HTMLElement>;
 const InlineCode = ({ children, className, ...props }: InlineCodeProps) => (
   <code
     className={cn(
@@ -90,7 +90,7 @@ const InlineCode = ({ children, className, ...props }: InlineCodeProps) => (
 
 type LeadProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLParagraphElement>;
+} & HTMLAttributes<HTMLParagraphElement>;
 const Lead = ({ children, className, ...props }: LeadProps) => (
   <p
     className={cn(
@@ -105,7 +105,7 @@ const Lead = ({ children, className, ...props }: LeadProps) => (
 
 type LargeProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 const Large = ({ children, className, ...props }: LargeProps) => (
   <div
     className={cn("text-lg font-semibold leading-7 text-foreground", className)}
@@ -117,7 +117,7 @@ const Large = ({ children, className, ...props }: LargeProps) => (
 
 type SmallProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 const Small = ({ children, className, ...props }: SmallProps) => (
   <small
     className={cn("text-sm font-medium leading-none", className)}
@@ -129,7 +129,7 @@ const Small = ({ children, className, ...props }: SmallProps) => (
 
 type MutedProps = {
   children: ReactNode;
-} & React.HTMLAttributes<HTMLParagraphElement>;
+} & HTMLAttributes<HTMLParagraphElement>;
 const Muted = ({ children, className, ...props }: MutedProps) => (
   <p
     className={cn(
