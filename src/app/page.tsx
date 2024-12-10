@@ -1,3 +1,9 @@
+import { Header } from "@/components";
+
 export default function Home() {
-  return <div className="flex-1">content</div>;
+  return (
+    <main className="flex flex-1 flex-col p-3">
+      <Header />
+    </main>
+  );
 }
