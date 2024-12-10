@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { ThemeProvider } from "@/components";
+import { Footer, ThemeProvider } from "@/components";
 
 export const metadata: Metadata = {
   title: "eSports Next",
@@ -20,7 +20,7 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body>
+      <body className="flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -28,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

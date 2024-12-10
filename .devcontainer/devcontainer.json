@@ -25,7 +25,8 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "bradlc.vscode-tailwindcss",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "figma.figma-vscode-extension"
       ]
     }
   }
