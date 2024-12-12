@@ -1,3 +1,4 @@
+export { Events } from "./Events";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Link } from "./Link";
