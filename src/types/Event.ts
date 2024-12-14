@@ -3,7 +3,7 @@ import { Match } from "@/types";
 export type Event = {
   startTime: string;
   state: string;
-  type: string;
+  type: "show" | "match";
   blockName: string;
   league: {
     name: string;
