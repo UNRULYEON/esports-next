@@ -1,5 +1,5 @@
 import { schedule } from "@/api";
-import { Event } from "@/components";
+import { Event, Typography } from "@/components";
 import { format } from "date-fns";
 import { Fragment } from "react";
 
@@ -10,7 +10,7 @@ export const Events = async () => {
     <code>
       {data.map(({ date, events }, i) => (
         <Fragment key={i}>
-          <h2>{format(new Date(date), "PPPP ")}</h2>
+          <Typography.Large>{format(new Date(date), "PPPP ")}</Typography.Large>
           {events.map((event, i) => {
             if (event.type === "show") {
               return <Fragment key={i}>SHOW</Fragment>;
