@@ -26,7 +26,8 @@
         "dbaeumer.vscode-eslint",
         "bradlc.vscode-tailwindcss",
         "esbenp.prettier-vscode",
-        "figma.figma-vscode-extension"
+        "figma.figma-vscode-extension",
+        "lokalise.i18n-ally"
       ]
     }
   }

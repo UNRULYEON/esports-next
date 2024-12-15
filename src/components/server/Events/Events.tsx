@@ -7,21 +7,25 @@ export const Events = async () => {
   const { data } = await schedule.get();
 
   return (
-    <code>
-      {data.map(({ date, events }, i) => (
-        <Fragment key={i}>
-          <Typography.Large>{format(new Date(date), "PPPP ")}</Typography.Large>
-          {events.map((event, i) => {
-            if (event.type === "show") {
-              return <Fragment key={i}>SHOW</Fragment>;
-            }
+    <div>
+      {data.map(({ date, events }) => (
+        <div key={date} className="mb-5 flex flex-col gap-1">
+          <Typography.Large className="sticky top-0 z-10 bg-background py-1">
+            {format(new Date(date), "PPPP ")}
+          </Typography.Large>
+          <div className="flex flex-col gap-3">
+            {events.map((event) => {
+              if (event.type === "show") {
+                return <Fragment key={event.league.name}>SHOW</Fragment>;
+              }
 
-            if (event.type === "match") {
-              return <Event key={i} data={event} />;
-            }
-          })}
-        </Fragment>
+              if (event.type === "match") {
+                return <Event key={event.match.id} data={event} />;
+              }
+            })}
+          </div>
+        </div>
       ))}
-    </code>
+    </div>
   );
 };

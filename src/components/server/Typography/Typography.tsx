@@ -108,10 +108,7 @@ type LargeProps = {
 } & HTMLAttributes<HTMLDivElement>;
 const Large = ({ children, className, ...props }: LargeProps) => (
   <div
-    className={cn(
-      "font-sans text-lg font-semibold leading-7 text-foreground",
-      className,
-    )}
+    className={cn("text-lg font-semibold leading-7 text-foreground", className)}
     {...props}
   >
     {children}
