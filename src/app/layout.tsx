@@ -3,8 +3,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import "./globals.css";
 import { Footer, ThemeProvider } from "@/components";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "eSports Next",
@@ -13,8 +13,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  matchDetails,
 }: Readonly<{
   children: React.ReactNode;
+  matchDetails: React.ReactNode;
 }>) {
   const locale = await getLocale();
 
@@ -26,7 +28,7 @@ export default async function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex flex-col">
+      <body className="grid grid-rows-[1fr,auto] p-3 sm:p-6">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
@@ -34,8 +36,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
-            {children}
+            <main className="flex flex-1 flex-row overflow-auto">
+              {children}
+              {matchDetails}
+            </main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

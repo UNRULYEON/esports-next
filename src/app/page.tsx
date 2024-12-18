@@ -2,9 +2,9 @@ import { Header, Events } from "@/components";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col p-3">
+    <div className="grid w-full max-w-96 grid-rows-[auto,1fr]">
       <Header />
       <Events />
-    </main>
+    </div>
   );
 }

@@ -15,12 +15,14 @@ import {
   TooltipTrigger,
 } from "@/components";
 import { useFormatter } from "next-intl";
+import { useRouter } from "next/navigation";
 
 type EventProps = {
   data: EventType;
 };
 
 export const Event = ({ data: event }: EventProps) => {
+  const router = useRouter();
   const format = useFormatter();
   const [isScoreRevealed, setIsScoreRevealed] = useState(true);
   const [isMatchRevealed, setIsMatchRevealed] = useState(
@@ -29,7 +31,12 @@ export const Event = ({ data: event }: EventProps) => {
 
   return (
     <TooltipProvider>
-      <Card className="relative bg-card pt-6 transition hover:bg-accent">
+      <Card
+        className="relative bg-card pt-6 transition hover:bg-accent"
+        onClick={() =>
+          isMatchRevealed && router.push(`/match/${event.match.id}`)
+        }
+      >
         <CardContent className="flex flex-col items-center gap-6">
           <div className="flex w-full items-center justify-center gap-3 font-bold">
             <div className="flex w-full items-center justify-end gap-5">
