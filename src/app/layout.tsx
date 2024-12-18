@@ -36,7 +36,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="flex flex-1 flex-row overflow-auto">
+            <main
+              className="flex flex-1 flex-row overflow-auto"
+              data-vaul-drawer-wrapper
+            >
               {children}
               {matchDetails}
             </main>
